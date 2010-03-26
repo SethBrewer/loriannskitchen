@@ -1,0 +1,20 @@
+<h1>Listing temp_emails</h1>
+
+<table>
+  <tr>
+    <th>Address</th>
+  </tr>
+
+<% for temp_email in @temp_emails %>
+  <tr>
+    <td><%=h temp_email.address %></td>
+    <td><%= link_to 'Show', temp_email %></td>
+    <td><%= link_to 'Edit', edit_temp_email_path(temp_email) %></td>
+    <td><%= link_to 'Destroy', temp_email, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New temp_email', new_temp_email_path %>

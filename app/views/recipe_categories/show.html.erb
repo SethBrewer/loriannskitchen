@@ -1,0 +1,13 @@
+<p>
+  <b>Name:</b>
+  <%=h @recipe_category.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @recipe_category.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_recipe_category_path(@recipe_category) %> |
+<%= link_to 'Back', recipe_categories_path %>

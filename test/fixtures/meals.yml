@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  date_and_time: 2010-03-24 20:07:30
+  price_for_small: 9.99
+  price_for_large: 9.99
+  price_for_special: 9.99
+
+two:
+  date_and_time: 2010-03-24 20:07:30
+  price_for_small: 9.99
+  price_for_large: 9.99
+  price_for_special: 9.99

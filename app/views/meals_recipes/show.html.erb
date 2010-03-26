@@ -1,0 +1,13 @@
+<p>
+  <b>Meal:</b>
+  <%=h @meals_recipe.meal_id %>
+</p>
+
+<p>
+  <b>Recipe:</b>
+  <%=h @meals_recipe.recipe_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_meals_recipe_path(@meals_recipe) %> |
+<%= link_to 'Back', meals_recipes_path %>

@@ -1,0 +1,23 @@
+<p>
+  <b>Date and time:</b>
+  <%=h @meal.date_and_time %>
+</p>
+
+<p>
+  <b>Price for small:</b>
+  <%=h @meal.price_for_small %>
+</p>
+
+<p>
+  <b>Price for large:</b>
+  <%=h @meal.price_for_large %>
+</p>
+
+<p>
+  <b>Price for special:</b>
+  <%=h @meal.price_for_special %>
+</p>
+
+
+<%= link_to 'Edit', edit_meal_path(@meal) %> |
+<%= link_to 'Back', meals_path %>

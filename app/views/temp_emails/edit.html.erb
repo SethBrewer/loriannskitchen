@@ -1,0 +1,16 @@
+<h1>Editing temp_email</h1>
+
+<% form_for(@temp_email) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @temp_email %> |
+<%= link_to 'Back', temp_emails_path %>

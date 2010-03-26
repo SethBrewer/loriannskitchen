@@ -1,0 +1,30 @@
+<h1>Listing recipes</h1>
+
+<%=calendar({:year => $year, :month => $month, :table_class => "calendar_helper"})%>
+
+<%= calendar(:year => @date.year, :month =>@date.month, :first_day_of_week =>1, :next_month_text => link_to (">>", :action=>'index', :params => {:date => @date.next_month.strftime("%Y-%m")}), :previous_month_text => link_to ("<<",:action=>'index',:params => {:date => @date.last_month.strftime("%Y-%m")})) %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Type</th>
+    <th>Recipe category</th>
+  </tr>
+
+<% for recipe in @recipes %>
+  <tr>
+    <td><%=h recipe.name %></td>
+    <td><%=h recipe.description %></td>
+    <td><%=h recipe.type %></td>
+    <td><%=h recipe.recipe_category.name %></td>
+    <td><%= link_to 'Show', recipe %></td>
+    <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
+    <td><%= link_to 'Destroy', recipe, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New recipe', new_recipe_path %>

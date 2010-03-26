@@ -1,0 +1,22 @@
+<h1>Listing meals_recipes</h1>
+
+<table>
+  <tr>
+    <th>Meal</th>
+    <th>Recipe</th>
+  </tr>
+
+<% for meals_recipe in @meals_recipes %>
+  <tr>
+    <td><%=h meals_recipe.meal_id %></td>
+    <td><%=h meals_recipe.recipe_id %></td>
+    <td><%= link_to 'Show', meals_recipe %></td>
+    <td><%= link_to 'Edit', edit_meals_recipe_path(meals_recipe) %></td>
+    <td><%= link_to 'Destroy', meals_recipe, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New meals_recipe', new_meals_recipe_path %>

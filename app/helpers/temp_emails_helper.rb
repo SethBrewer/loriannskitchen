@@ -1,0 +1,2 @@
+module TempEmailsHelper
+end
